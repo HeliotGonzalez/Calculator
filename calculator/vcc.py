@@ -6,7 +6,6 @@ string = ""
 power = 0
 
 import sys
-import re
 import keyboard
 from guizero import App, Text, PushButton, Box
 from playsound import playsound
@@ -1200,7 +1199,7 @@ if modded == 1:
 else:
    print("Custom keyboard shortcuts failed to load")
 
-print("Welcome to Very Cool Calculator (VCC)")
+print("Welcome to Very Cool Calculator (VCC), version 1.0")
 app = App(title="Calculator", height=400, width=500)
 number =  Box(app)
 command_box = Box(app, layout="grid", align="left", height=200, width=175)
