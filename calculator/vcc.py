@@ -310,9 +310,9 @@ def equals():
    try:
      result = eval(equation)
      characters = 1
-     number.value = result
      equation = result
      string = result
+     number.value = string
    except:
      number.value = "Invalid Syntax"
      characters = 0
