@@ -6,11 +6,14 @@ string = ""
 power = 0
 
 import sys
-import keyboard
+import keyboard # type: ignore
+import os
+import requests # type: ignore
+import update as u
 from guizero import App, Text, PushButton, Box
 from playsound import playsound
 try:
-   import calculatorMod as mod
+   import calculatorMod as mod # type: ignore
    modded = 1
 except:
    print("No mod")
@@ -1193,6 +1196,20 @@ keyboard.add_hotkey('x', x)
 keyboard.add_hotkey('y', y)
 keyboard.add_hotkey('z', z)
 
+#Checks for updates.
+v = open('update.txt','r')
+vs = v.read()
+os.remove("update.txt")
+r = requests.get('https://raw.githubusercontent.com/thetiger21/Calculator/refs/heads/main/calculator/update.txt', auth=('user','pass'))
+open('update.txt', 'wb').write(r.content)
+vrs = open('update.txt','r')
+version = vrs.read()
+if vs == version:
+   u.update()
+else:
+   print("No update")
+
+#Checks if there are any mods.
 if modded == 1:
    mod.shortcuts() 
    print("Custom keyboard shortcuts activated")
