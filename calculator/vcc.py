@@ -9,7 +9,7 @@ import sys
 import keyboard # type: ignore
 import os
 import requests # type: ignore
-import update as u
+import update as us
 from guizero import App, Text, PushButton, Box
 from playsound import playsound
 try:
@@ -1205,9 +1205,9 @@ open('update.txt', 'wb').write(r.content)
 vrs = open('update.txt','r')
 version = vrs.read()
 if vs == version:
-   u.update()
-else:
    print("No update")
+else:
+   us.update()
 
 #Checks if there are any mods.
 if modded == 1:
