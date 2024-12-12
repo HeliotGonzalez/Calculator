@@ -307,22 +307,15 @@ def equals():
    global string
    global equation
    global characters
-   if string == "1922++1991":
-      string = "☭ Stand Up To The Soviet Anthem!"
-      number.value = string
-      print("☭ Stand Up To The Soviet Anthem!")
-      playsound('music/Soviet_Anthem_Instrumental.mp3')
-      string = ""
-   else:
-      try:
-         result = eval(equation)
-         characters = 0
-         number.value = result
-         equation = ""
-         string = ""
-      except:
-         number.value = "Invalid Syntax"
-         characters = 0
+   try:
+     result = eval(equation)
+     characters = 1
+     number.value = result
+     equation = result
+     string = result
+   except:
+     number.value = "Invalid Syntax"
+     characters = 0
 
 #letters
 def a():
