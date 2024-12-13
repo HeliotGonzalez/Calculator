@@ -278,14 +278,13 @@ def bracketOne():
     global equation
     num = "("
     if characters == 0:
-       srv = num
-       string = str(srv)
+       string = num
        characters = 1
-       equation = str(srv)
+       equation = num
     else:
        string = string + num 
        equation = equation + num
-    number.value = string
+    number.value = string 
 
 def bracketTwo():
     global characters
@@ -294,10 +293,9 @@ def bracketTwo():
     global equation
     num = ")"
     if characters == 0:
-       srv = num
-       string = str(srv)
+       string = num
        characters = 1
-       equation = str(srv)
+       equation = num
     else:
        string = string + num 
        equation = equation + num
@@ -1174,7 +1172,6 @@ keyboard.add_hotkey('g', g)
 keyboard.add_hotkey('i', i)
 keyboard.add_hotkey('k', k)
 keyboard.add_hotkey('l', l)
-keyboard.add_hotkey('m', m)
 keyboard.add_hotkey('n', n)
 keyboard.add_hotkey('o', o)
 keyboard.add_hotkey('p', p)
