@@ -681,39 +681,6 @@ def l():
          characters = 0
    number.value = string
 
-def m():
-   global string
-   global equation
-   global characters
-   num = "m"
-   if characters == 0:
-      try:
-         f = open("vccData/"+num, "r")
-         formula = f.read()
-         string = num
-         equation = formula
-         characters = 1
-      except:
-         f = open("vccData/"+num, "x")
-         number.value = "Please refer to terminal window."
-         formula = input("Assign the letter to a number or equasion: ")
-         f.write(formula)
-         f.close()
-   else:
-      try:
-         f = open("vccData/"+num, "r")
-         formula = f.read()
-         string = string + num
-         equation = equation + formula
-      except:
-         f = open("vccData/"+num, "x")
-         number.value = "Please refer to terminal window"
-         formula = input("Assign the letter to a number or equation: ")
-         f.write(formula)
-         f.close()
-         characters = 0
-   number.value = string
-
 def n():
    global string
    global equation
