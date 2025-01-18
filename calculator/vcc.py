@@ -6,14 +6,14 @@ string = ""
 power = 0
 
 import sys
-import keyboard # type: ignore
+import keyboard 
 import os
-import requests # type: ignore
+import requests 
 import update as us
 from guizero import App, Text, PushButton, Box
 from playsound import playsound
 try:
-   import calculatorMod as mod # type: ignore
+   import calculatorMod as mod 
    modded = 1
 except:
    print("No mod")
